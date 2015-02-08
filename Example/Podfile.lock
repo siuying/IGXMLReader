@@ -1,0 +1,17 @@
+PODS:
+  - IGXMLReader (0.1.0)
+  - Kiwi (2.3.1)
+
+DEPENDENCIES:
+  - IGXMLReader (from `../`)
+  - Kiwi
+
+EXTERNAL SOURCES:
+  IGXMLReader:
+    :path: ../
+
+SPEC CHECKSUMS:
+  IGXMLReader: 425b667cbbecf43564cfb94d32757e2c7ec49607
+  Kiwi: 73e1400209055ee9c8ba78c6012b6b642d0fb9f7
+
+COCOAPODS: 0.35.0
