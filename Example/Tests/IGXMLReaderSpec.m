@@ -14,6 +14,25 @@ describe(@"IGXMLReader", ^{
     __block IGXMLReader* reader;
 
     context(@"#nextObject", ^{
+        describe(@"when at an empty element", ^{
+            it(@"should return empty element if it is", ^{
+                reader = [[IGXMLReader alloc] initWithXMLString:@"<xml><city>Paris</city><state/></xml>"];
+
+                NSMutableArray* nodeNamesArray = [NSMutableArray array];
+                NSMutableArray* isEmptyArray = [NSMutableArray array];
+                IGXMLReader* node;
+                while (node = [reader  nextObject]) {
+                    if ([node type] == IGXMLReaderNodeTypeElement) {
+                        [isEmptyArray addObject:@([node isEmpty])];
+                        [nodeNamesArray addObject:node.name];
+                    }
+                }
+
+                [[isEmptyArray should] equal:@[@NO, @NO, @YES]];
+                [[nodeNamesArray should] equal:@[@"xml", @"city", @"state"]];
+            });
+        });
+
         describe(@"when at a start tag", ^{
             beforeEach(^{
                 reader = [[IGXMLReader alloc] initWithXMLString:@"<document></document>"];

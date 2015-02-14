@@ -30,7 +30,13 @@
 -(instancetype) initWithXMLData:(NSData*)data URL:(NSURL*)URL encoding:(NSString*)encoding
 {
     self = [super init];
-    _reader = xmlReaderForMemory([data bytes], (int) [data length], [[URL absoluteString] UTF8String], [encoding UTF8String], XML_PARSE_NONET);
+    return [self initWithXMLData:data URL:URL encoding:encoding options:XML_PARSE_NONET];
+}
+
+-(instancetype) initWithXMLData:(NSData*)data URL:(NSURL*)URL encoding:(NSString*)encoding options:(int)options
+{
+    self = [super init];
+    _reader = xmlReaderForMemory([data bytes], (int) [data length], [[URL absoluteString] UTF8String], [encoding UTF8String], options);
     return self;
 }
 
@@ -165,6 +171,11 @@
 -(NSInteger) depth
 {
     return xmlTextReaderDepth(_reader);
+}
+
+-(BOOL) isEmpty
+{
+    return xmlTextReaderIsEmptyElement(_reader);
 }
 
 -(BOOL) hasValue

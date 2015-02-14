@@ -30,7 +30,10 @@ typedef NS_ENUM(NSInteger, IGXMLReaderNodeType) {
 };
 
 
-
+/**
+ * The IGXMLReader parser allows you to effectively pull parse an XML document. 
+ * Once instantiated, call #nextObject to iterate over each node. Note that you may only iterate over the document once!
+ */
 @interface IGXMLReader : NSEnumerator
 
 -(instancetype) initWithXMLString:(NSString*)XMLString;
@@ -38,6 +41,8 @@ typedef NS_ENUM(NSInteger, IGXMLReaderNodeType) {
 -(instancetype) initWithXMLString:(NSString*)XMLString URL:(NSURL*)URL;
 
 -(instancetype) initWithXMLData:(NSData*)data URL:(NSURL*)URL encoding:(NSString*)encoding;
+
+-(instancetype) initWithXMLData:(NSData*)data URL:(NSURL*)URL encoding:(NSString*)encoding options:(int)options;
 
 -(instancetype) nextObject;
 
@@ -62,6 +67,8 @@ typedef NS_ENUM(NSInteger, IGXMLReaderNodeType) {
 -(NSString*) value;
 
 -(NSInteger) depth;
+
+-(BOOL) isEmpty;
 
 -(BOOL) hasValue;
 
