@@ -52,13 +52,32 @@ typedef NS_ENUM(NSInteger, IGXMLReaderNodeType) {
 
 @interface IGXMLReader (Node)
 
+/**
+ * @return name of current node.
+ */
 -(NSString*) name;
 
+/**
+ * @param name name of attribute
+ * @return value of attribute with specified name, of current element. or nil if not an element.
+ */
 -(NSString*) attributeWithName:(NSString*)name;
 
+/**
+ * @param index number of index
+ * @return value of n-th attribute of current element, or nil if not an element.
+ */
 -(NSString*) attributeAtIndex:(NSUInteger)index;
 
+/**
+ * @return number of attributes of current element, or 0 if not an element.
+ */
 -(NSInteger) attributeCount;
+
+/**
+ * @returns attributes of current element. If current node is not an element, returns an empty Dictionary.
+ */
+-(NSDictionary*) attributes;
 
 -(IGXMLReaderNodeType) type;
 

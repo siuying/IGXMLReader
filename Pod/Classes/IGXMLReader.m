@@ -83,11 +83,11 @@
 
 -(NSString*) attributeAtIndex:(NSUInteger)index
 {
-    xmlChar* attributeName = xmlTextReaderGetAttributeNo(_reader, (int) index);
-    if (attributeName) {
-        NSString* attributeNameStr = [NSString stringWithUTF8String:(const char*) attributeName];
-        xmlFree(attributeName);
-        return attributeNameStr;
+    xmlChar* attribute = xmlTextReaderGetAttributeNo(_reader, (int) index);
+    if (attribute) {
+        NSString* attributeStr = [NSString stringWithUTF8String:(const char*) attribute];
+        xmlFree(attribute);
+        return attributeStr;
     } else {
         return nil;
     }
@@ -96,6 +96,27 @@
 -(NSInteger) attributeCount
 {
     return (NSInteger) xmlTextReaderAttributeCount(_reader);
+}
+
+-(NSDictionary*) attributes
+{
+    int type = xmlTextReaderNodeType(_reader);
+    if (type != IGXMLReaderNodeTypeElement) {
+        return @{};
+    }
+    
+    NSUInteger count = [self attributeCount];
+    NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithCapacity:count];
+    for (NSInteger i = 0; i < count; i++) {
+        xmlTextReaderMoveToAttributeNo(_reader, (int) i);
+        NSString* name = [self name];
+        NSString* value = [self value];
+        if (name && value) {
+            [dictionary setObject:value forKey:name];
+        }
+    }
+    xmlTextReaderMoveToElement(_reader);
+    return [dictionary copy];
 }
 
 -(IGXMLReaderNodeType) type
