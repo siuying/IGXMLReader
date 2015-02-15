@@ -35,6 +35,7 @@
 
 -(instancetype) initWithXMLData:(NSData*)data URL:(NSURL*)URL encoding:(NSString*)encoding options:(int)options
 {
+    NSParameterAssert(data);
     self = [super init];
     _reader = xmlReaderForMemory([data bytes], (int) [data length], [[URL absoluteString] UTF8String], [encoding UTF8String], options);
     return self;
