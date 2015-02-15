@@ -115,7 +115,33 @@ describe(@"IGXMLReader", ^{
             [[attributesArray should] equal:@[@0, @1, @1, @2, @1, @1, @0]];
         });
     });
+    
+    context(@"#value", ^{
+        it(@"should return value", ^{
+            reader = [[IGXMLReader alloc] initWithXMLString:@"<x xmlns:tenderlove='http://tenderlovemaking.com/'>\n\
+    <tenderlove:foo>snuggles!</tenderlove:foo>\n\
+</x>"];
+            
+            NSMutableArray* attributesArray = [NSMutableArray array];
+            for (IGXMLReader* node in reader) {
+                [attributesArray addObject:[node value] ?: [NSNull null]];
+            }
+            [[attributesArray should] equal:@[[NSNull null], @"\n    ", [NSNull null], @"snuggles!", [NSNull null], @"\n", [NSNull null]]];
+        });
+    });
 
+    context(@"#type", ^{
+        it(@"should return node type", ^{
+            reader = [[IGXMLReader alloc] initWithXMLString:@"<x>\
+                      <y>hello</y>\
+                      </x>"];
+            NSMutableArray* attributesArray = [NSMutableArray array];
+            for (IGXMLReader* node in reader) {
+                [attributesArray addObject:@([node type])];
+            }
+            [[attributesArray should] equal:@[@1, @14, @1, @3, @15, @14, @15]];
+        });
+    });
 
     context(@"#nextObject", ^{
         describe(@"when at a start tag", ^{
