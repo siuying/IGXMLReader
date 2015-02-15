@@ -75,7 +75,7 @@ describe(@"IGXMLReader", ^{
     });
 
     context(@"#attributeAtIndex:", ^{
-        it(@"should return attribute with name", ^{
+        it(@"should return attribute at index", ^{
             reader = [[IGXMLReader alloc] initWithXMLString:@"<x xmlns:tenderlove='http://tenderlovemaking.com/'>\
                       <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>\
                       </x>"];
@@ -87,6 +87,35 @@ describe(@"IGXMLReader", ^{
             [[attributesArray should] equal:@[@"http://tenderlovemaking.com/", [NSNull null], @"true", [NSNull null], @"true", [NSNull null], @"http://tenderlovemaking.com/"]];
         });
     });
+
+    context(@"#attributeCount", ^{
+        it(@"should return number of attributes for element tag", ^{
+            reader = [[IGXMLReader alloc] initWithXMLString:@"<x xmlns:tenderlove='http://tenderlovemaking.com/'>\
+                      <tenderlove:foo awesome='true' cool='true'>snuggles!</tenderlove:foo>\
+                      </x>"];
+            
+            NSMutableArray* attributesArray = [NSMutableArray array];
+            for (IGXMLReader* node in reader) {
+                [attributesArray addObject:@([node attributeCount])];
+            }
+            [[attributesArray should] equal:@[@1, @0, @2, @0, @0, @0, @0]];
+        });
+    });
+    
+    context(@"#depth", ^{
+        it(@"should return depth", ^{
+            reader = [[IGXMLReader alloc] initWithXMLString:@"<x xmlns:tenderlove='http://tenderlovemaking.com/'>\
+                      <tenderlove:foo>snuggles!</tenderlove:foo>\
+                      </x>"];
+            
+            NSMutableArray* attributesArray = [NSMutableArray array];
+            for (IGXMLReader* node in reader) {
+                [attributesArray addObject:@([node depth])];
+            }
+            [[attributesArray should] equal:@[@0, @1, @1, @2, @1, @1, @0]];
+        });
+    });
+
 
     context(@"#nextObject", ^{
         describe(@"when at a start tag", ^{
