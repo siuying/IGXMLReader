@@ -18,8 +18,7 @@ describe(@"IGXMLReader", ^{
             reader = [[IGXMLReader alloc] initWithXMLString:@"<xml><city>Paris</city><state/></xml>"];
             
             NSMutableArray* isEmptyArray = [NSMutableArray array];
-            IGXMLReader* node;
-            while (node = [reader  nextObject]) {
+            for (IGXMLReader* node in reader) {
                 if ([node type] == IGXMLReaderNodeTypeElement) {
                     [isEmptyArray addObject:@([node isEmpty])];
                 }
@@ -37,8 +36,7 @@ describe(@"IGXMLReader", ^{
                       </x>"];
 
             NSMutableArray* hasAttributesArray = [NSMutableArray array];
-            IGXMLReader* node;
-            while (node = [reader  nextObject]) {
+            for (IGXMLReader* node in reader) {
                 if ([node type] == IGXMLReaderNodeTypeElement) {
                     [hasAttributesArray addObject:@([node hasAttributes])];
                 }
@@ -57,14 +55,41 @@ describe(@"IGXMLReader", ^{
                       </x>"];
 
             NSMutableArray* attributesArray = [NSMutableArray array];
-            IGXMLReader* node;
-            while (node = [reader  nextObject]) {
+            for (IGXMLReader* node in reader) {
                 if ([node type] == IGXMLReaderNodeTypeElement) {
                     [attributesArray addObject:[node attributes]];
                 }
             }
             [[attributesArray should] equal:@[@{@"xmlns:tenderlove": @"http://tenderlovemaking.com/", @"xmlns": @"http://mothership.connection.com/"},
                                               @{@"awesome": @"true"}]];
+        });
+    });
+    
+    context(@"#attributeWithName:", ^{
+        it(@"should return attribute with name", ^{
+            reader = [[IGXMLReader alloc] initWithXMLString:@"<x xmlns:tenderlove='http://tenderlovemaking.com/'>\
+                      <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>\
+                      </x>"];
+            
+            NSMutableArray* attributesArray = [NSMutableArray array];
+            for (IGXMLReader* node in reader) {
+                [attributesArray addObject:[node attributeWithName:@"awesome"] ?: [NSNull null]];
+            }
+            [[attributesArray should] equal:@[[NSNull null], [NSNull null], @"true", [NSNull null], @"true", [NSNull null], [NSNull null]]];
+        });
+    });
+
+    context(@"#attributeAtIndex:", ^{
+        it(@"should return attribute with name", ^{
+            reader = [[IGXMLReader alloc] initWithXMLString:@"<x xmlns:tenderlove='http://tenderlovemaking.com/'>\
+                      <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>\
+                      </x>"];
+            
+            NSMutableArray* attributesArray = [NSMutableArray array];
+            for (IGXMLReader* node in reader) {
+                [attributesArray addObject:[node attributeAtIndex:0] ?: [NSNull null]];
+            }
+            [[attributesArray should] equal:@[@"http://tenderlovemaking.com/", [NSNull null], @"true", [NSNull null], @"true", [NSNull null], @"http://tenderlovemaking.com/"]];
         });
     });
 
