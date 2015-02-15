@@ -95,6 +95,11 @@ void IGXMLReader_error_array_pusher(void * ctx, xmlErrorPtr error)
     return IGXMLReader_wrap_xml_syntax_error(error);
 }
 
+-(NSArray*) errors
+{
+    return [_errors copy];
+}
+
 @end
 
 
