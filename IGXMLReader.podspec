@@ -1,16 +1,7 @@
-#
-# Be sure to run `pod lib lint IGXMLReader.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# Any lines starting with a # are optional, but encouraged
-#
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = "IGXMLReader"
   s.version          = "1.0.0"
-  s.summary          = "A XML Pull Parser for Objective-C based on libxml."
+  s.summary          = " A XML Pull Parser based on libxml for Objective-C."
 
   s.homepage         = "https://github.com/siuying/IGXMLReader"
   s.license          = 'MIT'
@@ -18,8 +9,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/siuying/IGXMLReader.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/siuying'
 
-  s.platform     = :ios, '7.0'
-  s.platform     = :osx, '10.9'
+  s.ios.deployment_target = '6.0'
+  s.osx.deployment_target = '10.8'
   s.requires_arc = true
 
   s.library = 'xml2'
