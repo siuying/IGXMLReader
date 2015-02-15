@@ -186,6 +186,20 @@ describe(@"IGXMLReader", ^{
         });
     });
     
+    context(@"#errors", ^{
+        it(@"should return errors", ^{
+            reader = [[IGXMLReader alloc] initWithXMLString:@"<x xmlns:tenderlove='http://tenderlovemaking.com/'>\
+                      <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>\
+                      <foo>\
+                      </x>"];
+            for (IGXMLReader* node in reader) {
+                NSLog(@"node: %@ (%@)", node.name, node.typeDescription);
+            }
+            [[[reader should] have:1] errors];
+            [[[reader.errors firstObject] should] equal:[reader lastError]];
+        });
+    });
+    
     context(@"#nextObject", ^{
         describe(@"when at a start tag", ^{
             beforeEach(^{

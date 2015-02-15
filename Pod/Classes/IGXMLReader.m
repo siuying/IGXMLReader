@@ -9,8 +9,34 @@
 #import "IGXMLReader.h"
 #import <libxml/xmlreader.h>
 
+NSString* const IGXMLReaderErrorDomain = @"IGXMLReaderErrorDomain";
+
+NSError* IGXMLReader_wrap_xml_syntax_error(xmlErrorPtr xmlError)
+{
+    if (xmlError) {
+        NSDictionary* userInfo = @{
+                                   @"domain": [NSString stringWithFormat:@"%i", xmlError->domain],
+                                   @"code": [NSString stringWithFormat:@"%i", xmlError->code],
+                                   @"message": xmlError->message ? [NSString stringWithCString:xmlError->message encoding:NSUTF8StringEncoding] : @"",
+                                   @"file": xmlError->file ? [NSString stringWithCString:xmlError->file encoding:NSUTF8StringEncoding] : @"",
+                                   @"line": [NSString stringWithFormat:@"%i", xmlError->line],
+                                   @"column": [NSString stringWithFormat:@"%i", xmlError->int2]
+                                   };
+        return [NSError errorWithDomain:IGXMLReaderErrorDomain code:xmlError->code userInfo:userInfo];
+    } else {
+        return nil;
+    }
+}
+
+void IGXMLReader_error_array_pusher(void * ctx, xmlErrorPtr error)
+{
+    NSMutableArray* array = (__bridge NSMutableArray*) ctx;
+    [array addObject:IGXMLReader_wrap_xml_syntax_error(error)];
+}
+
 @interface IGXMLReader()
 @property (nonatomic, unsafe_unretained) xmlTextReaderPtr reader;
+@property (nonatomic, strong) NSMutableArray* errors;
 @end
 
 @implementation IGXMLReader
@@ -37,7 +63,12 @@
 {
     NSParameterAssert(data);
     self = [super init];
+    _errors = [NSMutableArray array];
+
+    xmlSetStructuredErrorFunc((__bridge void *)_errors, IGXMLReader_error_array_pusher);
     _reader = xmlReaderForMemory([data bytes], (int) [data length], [[URL absoluteString] UTF8String], [encoding UTF8String], options);
+    xmlSetStructuredErrorFunc(NULL, NULL);
+
     return self;
 }
 
@@ -49,20 +80,19 @@
 
 -(instancetype) nextObject
 {
+    xmlSetStructuredErrorFunc((__bridge void *)_errors, IGXMLReader_error_array_pusher);
     int ret = xmlTextReaderRead(_reader);
+    xmlSetStructuredErrorFunc(NULL, NULL);
+
     if (ret == 1) {
         return self;
     }
     return nil;
 }
 
--(void) enumerateNodesUsingBlock:(void (^) (IGXMLReader* node))block
-{
-    int ret = xmlTextReaderRead(_reader);
-    while (ret == 1) {
-        block(self);
-        ret = xmlTextReaderRead(_reader);
-    }
+- (NSError*) lastError {
+    xmlErrorPtr error = xmlGetLastError();
+    return IGXMLReader_wrap_xml_syntax_error(error);
 }
 
 @end

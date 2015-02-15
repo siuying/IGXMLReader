@@ -29,6 +29,7 @@ typedef NS_ENUM(NSInteger, IGXMLReaderNodeType) {
     IGXMLReaderNodeTypeXmlDeclaration           = 17
 };
 
+extern NSString* const IGXMLReaderErrorDomain;
 
 /**
  * The IGXMLReader parser allows you to effectively pull parse an XML document. 
@@ -46,7 +47,15 @@ typedef NS_ENUM(NSInteger, IGXMLReaderNodeType) {
 
 -(instancetype) nextObject;
 
--(void) enumerateNodesUsingBlock:(void (^) (IGXMLReader* node))block;
+/**
+ * @return errors occurred
+ */
+-(NSArray*) errors;
+
+/**
+ * @return last errors occurred
+ */
+-(NSError*) lastError;
 
 @end
 
