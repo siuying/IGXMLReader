@@ -1,0 +1,20 @@
+<party>
+    <player>
+        <name>Butch</name>
+        <level>1</level>
+        <class>Fighter</class>
+        <hp>20</hp>
+    </player>
+    <player>
+        <name>Shadow</name>
+        <level>2</level>
+        <class>Rogue</class>
+        <hp>15</hp>
+    </player>
+    <player>
+        <name>Crak</name>
+        <level>3</level>
+        <class>Wizard</class>
+        <hp>10</hp>
+    </player>
+</party>

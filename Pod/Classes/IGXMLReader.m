@@ -252,6 +252,17 @@ void IGXMLReaderErrorArrayPusher(void * ctx, xmlErrorPtr error)
     return valueStr;
 }
 
+-(NSString*) text
+{
+    xmlChar* value = xmlTextReaderReadString(_reader);
+    NSString* valueStr;
+    if (value) {
+        valueStr = [NSString stringWithUTF8String:(const char*) value];
+        xmlFree(value);
+    }
+    return valueStr;
+}
+
 -(BOOL) isEmpty
 {
     return xmlTextReaderIsEmptyElement(_reader);

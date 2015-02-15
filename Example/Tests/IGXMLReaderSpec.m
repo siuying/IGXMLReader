@@ -285,7 +285,45 @@ describe(@"IGXMLReader", ^{
             });
         });
     });
-    
+
+    context(@"Example Parser", ^{
+        it(@"should parse party xml", ^{
+            NSMutableArray* party;
+            NSMutableDictionary* currentPlayer;
+
+            NSString* path = [[NSBundle bundleForClass:[self class]] pathForResource:@"party" ofType:@"xml"];
+            reader = [[IGXMLReader alloc] initWithXMLString:[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil]];
+
+            for (IGXMLReader* node in reader) {
+                if (node.type == IGXMLReaderNodeTypeElement) {
+                    if ([node.name isEqualToString:@"party"]) {
+                        party = [NSMutableArray array];
+                        
+                    } else if ([node.name isEqualToString:@"player"]) {
+                        currentPlayer = [NSMutableDictionary dictionary];
+                        [party addObject:currentPlayer];
+                        
+                    } else if ([node.name isEqualToString:@"name"]) {
+                        currentPlayer[@"name"] = node.text;
+                        
+                    } else if ([node.name isEqualToString:@"hp"]) {
+                        currentPlayer[@"hp"] = @([node.text integerValue]);
+                        
+                    } else if ([node.name isEqualToString:@"class"]) {
+                        currentPlayer[@"class"] = node.text;
+                        
+                    } else if ([node.name isEqualToString:@"level"]) {
+                        currentPlayer[@"level"] = @([node.text integerValue]);
+                    }
+                }
+            }
+            
+            NSArray* expected = @[@{@"name": @"Butch", @"level": @1, @"class": @"Fighter", @"hp": @20},
+                                  @{@"name": @"Shadow", @"level": @2, @"class": @"Rogue", @"hp": @15},
+                                  @{@"name": @"Crak", @"level": @3, @"class": @"Wizard", @"hp": @10}];
+            [[party should] equal:expected];
+        });
+    });
 });
 
 SPEC_END
