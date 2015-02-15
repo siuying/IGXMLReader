@@ -88,18 +88,39 @@ extern NSString* const IGXMLReaderErrorDomain;
  */
 -(NSDictionary*) attributes;
 
+/**
+ * @return Type of current node.
+ */
 -(IGXMLReaderNodeType) type;
 
+/**
+ * @return Type of current node, as string.
+ */
 -(NSString*) typeDescription;
 
+/**
+ * @return the text value of the node if present
+ */
 -(NSString*) value;
 
+/**
+ * @return The depth of the node in the tree.
+ */
 -(NSInteger) depth;
 
+/**
+ * @return the contents of child nodes and markup.
+ */
 -(NSString*) innerXML;
 
+/**
+ * @return the contents of the current node, including child nodes and markup.
+ */
 -(NSString*) outerXML;
 
+/**
+ * @return the contents of an element or a text node as a string.
+ */
 -(NSString*) text;
 
 /**
@@ -107,8 +128,14 @@ extern NSString* const IGXMLReaderErrorDomain;
  */
 -(BOOL) isEmpty;
 
+/**
+ * @return YES if this node has value.
+ */
 -(BOOL) hasValue;
 
+/**
+ * @return YES if this node has attributes.
+ */
 -(BOOL) hasAttributes;
 
 @end
