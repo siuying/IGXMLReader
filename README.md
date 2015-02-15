@@ -1,6 +1,6 @@
 # IGXMLReader
 
-[![CI Status](http://img.shields.io/travis/Francis Chong/IGXMLReader.svg?style=flat)](https://travis-ci.org/Francis Chong/IGXMLReader)
+[![CI Status](http://img.shields.io/travis/siuying/IGXMLReader.svg?style=flat)](https://travis-ci.org/Francis Chong/IGXMLReader)
 [![Version](https://img.shields.io/cocoapods/v/IGXMLReader.svg?style=flat)](http://cocoadocs.org/docsets/IGXMLReader)
 [![License](https://img.shields.io/cocoapods/l/IGXMLReader.svg?style=flat)](http://cocoadocs.org/docsets/IGXMLReader)
 [![Platform](https://img.shields.io/cocoapods/p/IGXMLReader.svg?style=flat)](http://cocoadocs.org/docsets/IGXMLReader)
