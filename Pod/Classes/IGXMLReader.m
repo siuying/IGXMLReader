@@ -11,7 +11,7 @@
 
 NSString* const IGXMLReaderErrorDomain = @"IGXMLReaderErrorDomain";
 
-NSError* IGXMLReader_wrap_xml_syntax_error(xmlErrorPtr xmlError)
+NSError* IGXMLReaderWrapXmlError(xmlErrorPtr xmlError)
 {
     if (xmlError) {
         NSDictionary* userInfo = @{
@@ -28,10 +28,10 @@ NSError* IGXMLReader_wrap_xml_syntax_error(xmlErrorPtr xmlError)
     }
 }
 
-void IGXMLReader_error_array_pusher(void * ctx, xmlErrorPtr error)
+void IGXMLReaderErrorArrayPusher(void * ctx, xmlErrorPtr error)
 {
     NSMutableArray* array = (__bridge NSMutableArray*) ctx;
-    [array addObject:IGXMLReader_wrap_xml_syntax_error(error)];
+    [array addObject:IGXMLReaderWrapXmlError(error)];
 }
 
 @interface IGXMLReader()
@@ -65,7 +65,7 @@ void IGXMLReader_error_array_pusher(void * ctx, xmlErrorPtr error)
     self = [super init];
     _errors = [NSMutableArray array];
 
-    xmlSetStructuredErrorFunc((__bridge void *)_errors, IGXMLReader_error_array_pusher);
+    xmlSetStructuredErrorFunc((__bridge void *)_errors, IGXMLReaderErrorArrayPusher);
     _reader = xmlReaderForMemory([data bytes], (int) [data length], [[URL absoluteString] UTF8String], [encoding UTF8String], options);
     xmlSetStructuredErrorFunc(NULL, NULL);
 
@@ -80,7 +80,7 @@ void IGXMLReader_error_array_pusher(void * ctx, xmlErrorPtr error)
 
 -(instancetype) nextObject
 {
-    xmlSetStructuredErrorFunc((__bridge void *)_errors, IGXMLReader_error_array_pusher);
+    xmlSetStructuredErrorFunc((__bridge void *)_errors, IGXMLReaderErrorArrayPusher);
     int ret = xmlTextReaderRead(_reader);
     xmlSetStructuredErrorFunc(NULL, NULL);
 
@@ -92,7 +92,7 @@ void IGXMLReader_error_array_pusher(void * ctx, xmlErrorPtr error)
 
 - (NSError*) lastError {
     xmlErrorPtr error = xmlGetLastError();
-    return IGXMLReader_wrap_xml_syntax_error(error);
+    return IGXMLReaderWrapXmlError(error);
 }
 
 -(NSArray*) errors
