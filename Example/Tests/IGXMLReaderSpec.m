@@ -173,6 +173,19 @@ describe(@"IGXMLReader", ^{
         });
     });
     
+    context(@"#name", ^{
+        it(@"should return name", ^{
+            reader = [[IGXMLReader alloc] initWithXMLString:@"<x xmlns:edi='http://ecommerce.example.org/schema'>\
+                      <edi:foo>hello</edi:foo>\
+                      </x>"];
+            NSMutableArray* names = [NSMutableArray array];
+            for (IGXMLReader* node in reader) {
+                [names addObject:[node name]];
+            }
+            [[names should] equal:@[@"x", @"#text", @"edi:foo", @"#text", @"edi:foo", @"#text", @"x"]];
+        });
+    });
+    
     context(@"#nextObject", ^{
         describe(@"when at a start tag", ^{
             beforeEach(^{
