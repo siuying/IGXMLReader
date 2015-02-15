@@ -195,6 +195,28 @@
     return xmlTextReaderDepth(_reader);
 }
 
+-(NSString*) innerXML
+{
+    xmlChar* value = xmlTextReaderReadInnerXml(_reader);
+    NSString* valueStr;
+    if (value) {
+        valueStr = [NSString stringWithUTF8String:(const char*) value];
+        xmlFree(value);
+    }
+    return valueStr;
+}
+
+-(NSString*) outerXML
+{
+    xmlChar* value = xmlTextReaderReadOuterXml(_reader);
+    NSString* valueStr;
+    if (value) {
+        valueStr = [NSString stringWithUTF8String:(const char*) value];
+        xmlFree(value);
+    }
+    return valueStr;
+}
+
 -(BOOL) isEmpty
 {
     return xmlTextReaderIsEmptyElement(_reader);

@@ -87,6 +87,10 @@ typedef NS_ENUM(NSInteger, IGXMLReaderNodeType) {
 
 -(NSInteger) depth;
 
+-(NSString*) innerXML;
+
+-(NSString*) outerXML;
+
 /**
  * @return return YES if this is an empty (self-closing) element. return NO if this is not an element, or not an empty element.
  */

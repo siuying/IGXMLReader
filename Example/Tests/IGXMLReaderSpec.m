@@ -142,7 +142,37 @@ describe(@"IGXMLReader", ^{
             [[attributesArray should] equal:@[@1, @14, @1, @3, @15, @14, @15]];
         });
     });
+    
+    context(@"#innerXML", ^{
+        it(@"should return inner xml", ^{
+            reader = [[IGXMLReader alloc] initWithXMLString:@"<x><y>hello</y></x>"];
+            [reader nextObject];
+            [[[reader innerXML] should] equal:@"<y>hello</y>"];
+        });
+    });
+    
+    context(@"#outerXML", ^{
+        it(@"should return outer xml", ^{
+            NSArray* strings = @[@"<x><y>hello</y></x>", @"<y>hello</y>", @"hello", @"<y/>", @"<x/>"];
+            NSMutableArray* outerXMLs = [NSMutableArray array];
+            reader = [[IGXMLReader alloc] initWithXMLString:[strings firstObject]];
+            for (IGXMLReader* node in reader) {
+                [outerXMLs addObject:[node outerXML]];
+            }
+            [[[outerXMLs copy] should] equal:strings];
+        });
 
+        it(@"should return outer xml with empty nodes", ^{
+            NSArray* strings = @[@"<x><y/></x>", @"<y/>", @"<x/>"];
+            NSMutableArray* outerXMLs = [NSMutableArray array];
+            reader = [[IGXMLReader alloc] initWithXMLString:[strings firstObject]];
+            for (IGXMLReader* node in reader) {
+                [outerXMLs addObject:[node outerXML]];
+            }
+            [[[outerXMLs copy] should] equal:strings];
+        });
+    });
+    
     context(@"#nextObject", ^{
         describe(@"when at a start tag", ^{
             beforeEach(^{
