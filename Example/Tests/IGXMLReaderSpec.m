@@ -19,12 +19,10 @@ describe(@"IGXMLReader", ^{
             
             NSMutableArray* isEmptyArray = [NSMutableArray array];
             for (IGXMLReader* node in reader) {
-                if ([node type] == IGXMLReaderNodeTypeElement) {
-                    [isEmptyArray addObject:@([node isEmpty])];
-                }
+                [isEmptyArray addObject:@([node isEmpty])];
             }
             
-            [[isEmptyArray should] equal:@[@NO, @NO, @YES]];
+            [[isEmptyArray should] equal:@[@NO, @NO, @NO, @NO, @YES, @NO]];
         });
     });
 
@@ -32,17 +30,14 @@ describe(@"IGXMLReader", ^{
         it(@"should return YES when has attributes", ^{
             reader = [[IGXMLReader alloc] initWithXMLString:@"<x xmlns:tenderlove='http://tenderlovemaking.com/'>\
                       <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>\
-                      <c></c>\
                       </x>"];
 
             NSMutableArray* hasAttributesArray = [NSMutableArray array];
             for (IGXMLReader* node in reader) {
-                if ([node type] == IGXMLReaderNodeTypeElement) {
-                    [hasAttributesArray addObject:@([node hasAttributes])];
-                }
+                [hasAttributesArray addObject:@([node hasAttributes])];
             }
             
-            [[hasAttributesArray should] equal:@[@YES, @YES, @NO]];
+            [[hasAttributesArray should] equal:@[@YES, @NO, @YES, @NO, @YES, @NO, @YES]];
         });
     });
 

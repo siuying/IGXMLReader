@@ -75,7 +75,7 @@ typedef NS_ENUM(NSInteger, IGXMLReaderNodeType) {
 -(NSInteger) attributeCount;
 
 /**
- * @returns attributes of current element. If current node is not an element, returns an empty Dictionary.
+ * @return attributes of current element. If current node is not an element, returns an empty Dictionary.
  */
 -(NSDictionary*) attributes;
 
@@ -87,6 +87,9 @@ typedef NS_ENUM(NSInteger, IGXMLReaderNodeType) {
 
 -(NSInteger) depth;
 
+/**
+ * @return return YES if this is an empty (self-closing) element. return NO if this is not an element, or not an empty element.
+ */
 -(BOOL) isEmpty;
 
 -(BOOL) hasValue;
