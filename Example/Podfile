@@ -1,10 +1,10 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'IGXMLReader', :exclusive => true do
+target 'IGXMLReader' do
   pod "IGXMLReader", :path => "../"
 end
 
-target 'Tests', :exclusive => true do
+target 'Tests' do
   pod "IGXMLReader", :path => "../"
 
   pod 'Kiwi'
