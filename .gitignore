@@ -29,5 +29,5 @@ DerivedData
 # Note: if you ignore the Pods directory, make sure to uncomment
 # `pod install` in .travis.yml
 #
-Pods/
-!Pods.xcodeproj
+Example/Pods/*
+!Example/Pods/Pods.xcodeproj
