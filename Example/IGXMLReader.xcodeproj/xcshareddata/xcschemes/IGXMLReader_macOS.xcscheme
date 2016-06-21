@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F589195388D20070C39A"
-               BuildableName = "IGXMLReader.app"
-               BlueprintName = "IGXMLReader"
+               BlueprintIdentifier = "54822B7C1D18F9A9000CC96F"
+               BuildableName = "IGXMLReader_macOS.app"
+               BlueprintName = "IGXMLReader_macOS"
                ReferencedContainer = "container:IGXMLReader.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F5AD195388D20070C39A"
-               BuildableName = "Tests.xctest"
-               BlueprintName = "Tests"
+               BlueprintIdentifier = "54822B8E1D18F9A9000CC96F"
+               BuildableName = "IGXMLReader_macOSTests.xctest"
+               BlueprintName = "IGXMLReader_macOSTests"
                ReferencedContainer = "container:IGXMLReader.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "IGXMLReader.app"
-            BlueprintName = "IGXMLReader"
+            BlueprintIdentifier = "54822B7C1D18F9A9000CC96F"
+            BuildableName = "IGXMLReader_macOS.app"
+            BlueprintName = "IGXMLReader_macOS"
             ReferencedContainer = "container:IGXMLReader.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,9 +65,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "IGXMLReader.app"
-            BlueprintName = "IGXMLReader"
+            BlueprintIdentifier = "54822B7C1D18F9A9000CC96F"
+            BuildableName = "IGXMLReader_macOS.app"
+            BlueprintName = "IGXMLReader_macOS"
             ReferencedContainer = "container:IGXMLReader.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -84,9 +84,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "IGXMLReader.app"
-            BlueprintName = "IGXMLReader"
+            BlueprintIdentifier = "54822B7C1D18F9A9000CC96F"
+            BuildableName = "IGXMLReader_macOS.app"
+            BlueprintName = "IGXMLReader_macOS"
             ReferencedContainer = "container:IGXMLReader.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

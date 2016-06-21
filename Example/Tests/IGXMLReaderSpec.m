@@ -6,7 +6,8 @@
 //  Copyright (c) 2014 Francis Chong. All rights reserved.
 //
 
-#import "IGXMLReader.h"
+#import <Kiwi/Kiwi.h>
+#import <IGXMLReader/IGXMLReader.h>
 
 SPEC_BEGIN(IGXMLReaderSpec)
 

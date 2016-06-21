@@ -1,10 +1,21 @@
 source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
 
 target 'IGXMLReader' do
   pod "IGXMLReader", :path => "../"
 end
 
 target 'Tests' do
+  pod "IGXMLReader", :path => "../"
+
+  pod 'Kiwi'
+end
+
+target 'IGXMLReader_macOS' do
+  pod "IGXMLReader", :path => "../"
+end
+
+target 'IGXMLReader_macOSTests' do
   pod "IGXMLReader", :path => "../"
 
   pod 'Kiwi'

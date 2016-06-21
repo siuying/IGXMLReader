@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4AE9A495495D305FA951D9CE /* Pods_IGXMLReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAB3B8D042C75A570060B5A /* Pods_IGXMLReader.framework */; };
+		54822B811D18F9A9000CC96F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54822B801D18F9A9000CC96F /* AppDelegate.m */; };
+		54822B841D18F9A9000CC96F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54822B831D18F9A9000CC96F /* main.m */; };
+		54822B861D18F9A9000CC96F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54822B851D18F9A9000CC96F /* Assets.xcassets */; };
+		54822B891D18F9A9000CC96F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54822B871D18F9A9000CC96F /* MainMenu.xib */; };
+		54822B9C1D18FA80000CC96F /* IGXMLReaderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* IGXMLReaderSpec.m */; };
+		54822B9D1D18FB7D000CC96F /* party.xml in Resources */ = {isa = PBXBuildFile; fileRef = 54A612C71A90497500C2361F /* party.xml */; };
 		54A612C81A90497500C2361F /* party.xml in Resources */ = {isa = PBXBuildFile; fileRef = 54A612C71A90497500C2361F /* party.xml */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -23,11 +30,19 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* IGXMLReaderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* IGXMLReaderSpec.m */; };
-		CA7231B3F086498B3566CE96 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08805CE4AEA90DBFA7717784 /* libPods-Tests.a */; };
-		D94737674E032B906C7459F7 /* libPods-IGXMLReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4D02B25DFF8450991B5369 /* libPods-IGXMLReader.a */; };
+		9F03C19D18C13730E3EBF7F6 /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B9E0D753BADBAFBE2DD2A7 /* Pods_Tests.framework */; };
+		E7D04BCE40DC89A0858E30C8 /* Pods_IGXMLReader_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE1BAE76FE59C5B28B49030 /* Pods_IGXMLReader_macOS.framework */; };
+		F58254B13CE3F286EBCC857C /* Pods_IGXMLReader_macOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D71489D5EF3236C56F5EB7 /* Pods_IGXMLReader_macOSTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		54822B901D18F9A9000CC96F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54822B7C1D18F9A9000CC96F;
+			remoteInfo = IGXMLReader_macOS;
+		};
 		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6003F582195388D10070C39A /* Project object */;
@@ -38,10 +53,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08805CE4AEA90DBFA7717784 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BE1BAE76FE59C5B28B49030 /* Pods_IGXMLReader_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IGXMLReader_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4D198AC4388E177008708A /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2B9D337D8C0E355FEAE7728E /* Pods-IGXMLReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGXMLReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-IGXMLReader/Pods-IGXMLReader.release.xcconfig"; sourceTree = "<group>"; };
+		3C21EA6E65F30EF0C729E446 /* Pods-IGXMLReader_macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGXMLReader_macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-IGXMLReader_macOS/Pods-IGXMLReader_macOS.release.xcconfig"; sourceTree = "<group>"; };
 		484781C01F4D232E9C7450AB /* IGXMLReader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IGXMLReader.podspec; path = ../IGXMLReader.podspec; sourceTree = "<group>"; };
+		48B9E0D753BADBAFBE2DD2A7 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5291CBCAB09E4FE978CE2BDC /* Pods-IGXMLReader_macOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGXMLReader_macOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IGXMLReader_macOSTests/Pods-IGXMLReader_macOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		54822B7D1D18F9A9000CC96F /* IGXMLReader_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGXMLReader_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		54822B7F1D18F9A9000CC96F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		54822B801D18F9A9000CC96F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		54822B831D18F9A9000CC96F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		54822B851D18F9A9000CC96F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		54822B881D18F9A9000CC96F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		54822B8A1D18F9A9000CC96F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54822B8F1D18F9A9000CC96F /* IGXMLReader_macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IGXMLReader_macOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54822B951D18F9A9000CC96F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54A612C71A90497500C2361F /* party.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = party.xml; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* IGXMLReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGXMLReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,14 +91,33 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* IGXMLReaderSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGXMLReaderSpec.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		758D4F48AF7DD10269374532 /* Pods-IGXMLReader_macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGXMLReader_macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IGXMLReader_macOS/Pods-IGXMLReader_macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8AF2100A2A165ABF3AB027E5 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9258BBD0069E3C1BA94FF737 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		AF4D02B25DFF8450991B5369 /* libPods-IGXMLReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IGXMLReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BAB3B8D042C75A570060B5A /* Pods_IGXMLReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IGXMLReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1605206BE3A4293C0E9F792 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		EE20023A2D7FA3BEB98050D6 /* Pods-IGXMLReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGXMLReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IGXMLReader/Pods-IGXMLReader.debug.xcconfig"; sourceTree = "<group>"; };
+		F7D71489D5EF3236C56F5EB7 /* Pods_IGXMLReader_macOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IGXMLReader_macOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B9550CBB4CB94D8C40BA77 /* Pods-IGXMLReader_macOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGXMLReader_macOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IGXMLReader_macOSTests/Pods-IGXMLReader_macOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		54822B7A1D18F9A9000CC96F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7D04BCE40DC89A0858E30C8 /* Pods_IGXMLReader_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54822B8C1D18F9A9000CC96F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F58254B13CE3F286EBCC857C /* Pods_IGXMLReader_macOSTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F587195388D20070C39A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -79,7 +125,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				D94737674E032B906C7459F7 /* libPods-IGXMLReader.a in Frameworks */,
+				4AE9A495495D305FA951D9CE /* Pods_IGXMLReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,19 +136,50 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				CA7231B3F086498B3566CE96 /* libPods-Tests.a in Frameworks */,
+				9F03C19D18C13730E3EBF7F6 /* Pods_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54822B7E1D18F9A9000CC96F /* IGXMLReader_macOS */ = {
+			isa = PBXGroup;
+			children = (
+				54822B7F1D18F9A9000CC96F /* AppDelegate.h */,
+				54822B801D18F9A9000CC96F /* AppDelegate.m */,
+				54822B851D18F9A9000CC96F /* Assets.xcassets */,
+				54822B871D18F9A9000CC96F /* MainMenu.xib */,
+				54822B8A1D18F9A9000CC96F /* Info.plist */,
+				54822B821D18F9A9000CC96F /* Supporting Files */,
+			);
+			path = IGXMLReader_macOS;
+			sourceTree = "<group>";
+		};
+		54822B821D18F9A9000CC96F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				54822B831D18F9A9000CC96F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		54822B921D18F9A9000CC96F /* IGXMLReader_macOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				54822B951D18F9A9000CC96F /* Info.plist */,
+			);
+			path = IGXMLReader_macOSTests;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* IGXMLReader */,
 				6003F5B5195388D20070C39A /* Tests */,
+				54822B7E1D18F9A9000CC96F /* IGXMLReader_macOS */,
+				54822B921D18F9A9000CC96F /* IGXMLReader_macOSTests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				73303571661A5A6D35D9C6E7 /* Pods */,
@@ -114,6 +191,8 @@
 			children = (
 				6003F58A195388D20070C39A /* IGXMLReader.app */,
 				6003F5AE195388D20070C39A /* Tests.xctest */,
+				54822B7D1D18F9A9000CC96F /* IGXMLReader_macOS.app */,
+				54822B8F1D18F9A9000CC96F /* IGXMLReader_macOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,8 +204,10 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				AF4D02B25DFF8450991B5369 /* libPods-IGXMLReader.a */,
-				08805CE4AEA90DBFA7717784 /* libPods-Tests.a */,
+				9BAB3B8D042C75A570060B5A /* Pods_IGXMLReader.framework */,
+				1BE1BAE76FE59C5B28B49030 /* Pods_IGXMLReader_macOS.framework */,
+				F7D71489D5EF3236C56F5EB7 /* Pods_IGXMLReader_macOSTests.framework */,
+				48B9E0D753BADBAFBE2DD2A7 /* Pods_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,6 +275,10 @@
 				2B9D337D8C0E355FEAE7728E /* Pods-IGXMLReader.release.xcconfig */,
 				8AF2100A2A165ABF3AB027E5 /* Pods-Tests.debug.xcconfig */,
 				1D4D198AC4388E177008708A /* Pods-Tests.release.xcconfig */,
+				758D4F48AF7DD10269374532 /* Pods-IGXMLReader_macOS.debug.xcconfig */,
+				3C21EA6E65F30EF0C729E446 /* Pods-IGXMLReader_macOS.release.xcconfig */,
+				5291CBCAB09E4FE978CE2BDC /* Pods-IGXMLReader_macOSTests.debug.xcconfig */,
+				F8B9550CBB4CB94D8C40BA77 /* Pods-IGXMLReader_macOSTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -201,6 +286,47 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		54822B7C1D18F9A9000CC96F /* IGXMLReader_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54822B9A1D18F9A9000CC96F /* Build configuration list for PBXNativeTarget "IGXMLReader_macOS" */;
+			buildPhases = (
+				86A31DA37D725F1BCEE7466F /* [CP] Check Pods Manifest.lock */,
+				54822B791D18F9A9000CC96F /* Sources */,
+				54822B7A1D18F9A9000CC96F /* Frameworks */,
+				54822B7B1D18F9A9000CC96F /* Resources */,
+				5694E22FA4B05D624800E90E /* [CP] Embed Pods Frameworks */,
+				4D39224DB908C8A1BED1ED9E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IGXMLReader_macOS;
+			productName = IGXMLReader_macOS;
+			productReference = 54822B7D1D18F9A9000CC96F /* IGXMLReader_macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		54822B8E1D18F9A9000CC96F /* IGXMLReader_macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54822B9B1D18F9A9000CC96F /* Build configuration list for PBXNativeTarget "IGXMLReader_macOSTests" */;
+			buildPhases = (
+				F054F7206C7AE42B463EFC48 /* [CP] Check Pods Manifest.lock */,
+				54822B8B1D18F9A9000CC96F /* Sources */,
+				54822B8C1D18F9A9000CC96F /* Frameworks */,
+				54822B8D1D18F9A9000CC96F /* Resources */,
+				E9136C384E8EBA0B11C0251D /* [CP] Embed Pods Frameworks */,
+				9E08D480DD3079817E0AFB91 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54822B911D18F9A9000CC96F /* PBXTargetDependency */,
+			);
+			name = IGXMLReader_macOSTests;
+			productName = IGXMLReader_macOSTests;
+			productReference = 54822B8F1D18F9A9000CC96F /* IGXMLReader_macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6003F589195388D20070C39A /* IGXMLReader */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "IGXMLReader" */;
@@ -249,9 +375,26 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = IG;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Francis Chong";
 				TargetAttributes = {
+					54822B7C1D18F9A9000CC96F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 638635GR5X;
+						DevelopmentTeamName = "Ignition Soft Limited";
+						ProvisioningStyle = Automatic;
+					};
+					54822B8E1D18F9A9000CC96F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 638635GR5X;
+						DevelopmentTeamName = "Ignition Soft Limited";
+						ProvisioningStyle = Automatic;
+						TestTargetID = 54822B7C1D18F9A9000CC96F;
+					};
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 638635GR5X;
+						DevelopmentTeamName = "Ignition Soft Limited";
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -272,11 +415,30 @@
 			targets = (
 				6003F589195388D20070C39A /* IGXMLReader */,
 				6003F5AD195388D20070C39A /* Tests */,
+				54822B7C1D18F9A9000CC96F /* IGXMLReader_macOS */,
+				54822B8E1D18F9A9000CC96F /* IGXMLReader_macOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		54822B7B1D18F9A9000CC96F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54822B861D18F9A9000CC96F /* Assets.xcassets in Resources */,
+				54822B891D18F9A9000CC96F /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54822B8D1D18F9A9000CC96F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54822B9D1D18FB7D000CC96F /* party.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F588195388D20070C39A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -315,6 +477,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		4D39224DB908C8A1BED1ED9E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IGXMLReader_macOS/Pods-IGXMLReader_macOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4F950A370DA36C9A725939D8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,6 +505,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5694E22FA4B05D624800E90E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IGXMLReader_macOS/Pods-IGXMLReader_macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		725F0DEBAA3F39C353372154 /* [CP] Embed Pods Frameworks */ = {
@@ -345,6 +537,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IGXMLReader/Pods-IGXMLReader-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		86A31DA37D725F1BCEE7466F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		8EB5FDC07B5B32493D3E0C1D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -358,6 +565,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IGXMLReader/Pods-IGXMLReader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E08D480DD3079817E0AFB91 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IGXMLReader_macOSTests/Pods-IGXMLReader_macOSTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A756121540470D53855FC814 /* [CP] Check Pods Manifest.lock */ = {
@@ -375,6 +597,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		E9136C384E8EBA0B11C0251D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IGXMLReader_macOSTests/Pods-IGXMLReader_macOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EF3B59D6B80E70AC5831B12B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,9 +627,41 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F054F7206C7AE42B463EFC48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		54822B791D18F9A9000CC96F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54822B841D18F9A9000CC96F /* main.m in Sources */,
+				54822B811D18F9A9000CC96F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54822B8B1D18F9A9000CC96F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54822B9C1D18FA80000CC96F /* IGXMLReaderSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F586195388D20070C39A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -414,6 +683,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		54822B911D18F9A9000CC96F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54822B7C1D18F9A9000CC96F /* IGXMLReader_macOS */;
+			targetProxy = 54822B901D18F9A9000CC96F /* PBXContainerItemProxy */;
+		};
 		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6003F589195388D20070C39A /* IGXMLReader */;
@@ -422,6 +696,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		54822B871D18F9A9000CC96F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54822B881D18F9A9000CC96F /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		6003F596195388D20070C39A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -457,6 +739,104 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		54822B961D18F9A9000CC96F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 758D4F48AF7DD10269374532 /* Pods-IGXMLReader_macOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = IGXMLReader_macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "hk.ignition.IGXMLReader-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		54822B971D18F9A9000CC96F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C21EA6E65F30EF0C729E446 /* Pods-IGXMLReader_macOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = IGXMLReader_macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "hk.ignition.IGXMLReader-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		54822B981D18F9A9000CC96F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5291CBCAB09E4FE978CE2BDC /* Pods-IGXMLReader_macOSTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = IGXMLReader_macOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "hk.ignition.IGXMLReader-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IGXMLReader_macOS.app/Contents/MacOS/IGXMLReader_macOS";
+			};
+			name = Debug;
+		};
+		54822B991D18F9A9000CC96F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8B9550CBB4CB94D8C40BA77 /* Pods-IGXMLReader_macOSTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = IGXMLReader_macOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "hk.ignition.IGXMLReader-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IGXMLReader_macOS.app/Contents/MacOS/IGXMLReader_macOS";
+			};
+			name = Release;
+		};
 		6003F5BD195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -472,11 +852,15 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -489,7 +873,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -511,18 +895,21 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -538,6 +925,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IGXMLReader/IGXMLReader-Prefix.pch";
 				INFOPLIST_FILE = "IGXMLReader/IGXMLReader-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -552,6 +940,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IGXMLReader/IGXMLReader-Prefix.pch";
 				INFOPLIST_FILE = "IGXMLReader/IGXMLReader-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -574,6 +963,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -593,6 +983,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -602,6 +993,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		54822B9A1D18F9A9000CC96F /* Build configuration list for PBXNativeTarget "IGXMLReader_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54822B961D18F9A9000CC96F /* Debug */,
+				54822B971D18F9A9000CC96F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54822B9B1D18F9A9000CC96F /* Build configuration list for PBXNativeTarget "IGXMLReader_macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54822B981D18F9A9000CC96F /* Debug */,
+				54822B991D18F9A9000CC96F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6003F585195388D10070C39A /* Build configuration list for PBXProject "IGXMLReader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
