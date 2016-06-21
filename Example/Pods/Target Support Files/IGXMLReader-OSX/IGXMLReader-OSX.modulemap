@@ -1,0 +1,6 @@
+framework module IGXMLReader {
+  umbrella header "IGXMLReader-OSX-umbrella.h"
+
+  export *
+  module * { export * }
+}

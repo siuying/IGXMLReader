@@ -31,6 +31,8 @@ DerivedData
 #
 Example/Pods/*
 !Example/Pods/Pods.xcodeproj
+!Example/Pods/Target Support Files
+
 Example/Pods/Target Support Files/*
 !Example/Pods/Target Support Files/IGXMLReader-iOS
 !Example/Pods/Target Support Files/IGXMLReader-OSX
